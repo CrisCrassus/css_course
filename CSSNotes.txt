@@ -1,0 +1,84 @@
+CSS Notes
+
+Boilerplate:
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: - ;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+Background-Pos: Anchors that point when. resized
+
+
+Three Pillars of CSS
+Responsive Design -> build one website that works well across all screen sizes and devices
+Maintainable & Scalable code -> Code that is clean, easy to understand and is reusable.  Think about class names, architecture, etc…
+Web Performance -> As few http request, compress, compressed images and little usage of them as possible.
+
+How CSS works behind the scenes
+What happens when a CSS page loaded?
+	Load HTML -> Parse HTML —> Build DOM
+				Load CSS -> Parse CSS(Calculated on user’s device)—> Build CSSOM
+	Build RENDER TREE
+	Render with Visual Formatting Model
+	Website ready
+
+
+Cascade -> Process of combining different style sheets and resolving conflicts between different CSS rules and declarations, when more that one rule applies to a certain element.
+
+Importance > Specificity > Source Order
+
+!Imp User Decs		Inline Style							
+!imp Author Decs		IDs
+Author Decs			Classes, pseudo-classes, attributes
+User Decs			Elements, pseudo-elements
+Browser
+
+
+CSS Parsing (2)
+
+Values:
+
+Declared Value(from author declarations)
+Cascaded Value(value after cascade)
+Specified Value(default, if no cascade)
+Computed Value (converting relative values)
+Used Values(final calc, based on layout)
+Actual Value(browsed and device restrictons)
+
+E.M(fonts) -> same as rem but uses parent as reference.
+E.M(length) -> use the current element’s font size as a reference.
+R.E.M -> works the same as em, but uses root settings as point of reference.
+
+VH -> generated from view port height
+VW ->  generated from view port width
+
+Visual Formatting Model
+
+Dimensions of Box Model -> 
+Fill area includes padding area and content
+Box-sizing: border-box -> defines h & w on entire box, inc padding area. Paddings and borders won’t get added.
+
+Box Types
+Defines by display:
+Block -> Vertically organised one after another, 100% of parents width.
+Inline -> Occupies only the space it needs vertically, appears inline, no heights and widths, content distributed in lines, paddings and margins only horizontal.
+Inline-block -> Occupies only content space, no line breaks, has access to block props
+
+Positioning Scheme
+Normal flow->Elements laid out according to source order (default: relative)
+Float->Taken out of normal flow and shift to left or right or parent container. Content will wrap around.
+Absolute-> Element is taken out of normal flow, has no impact of surrounding	elements	 positions using top, bottom, left and right. Can be contained using relative in the parent container. Fixed is similar but fixes to the viewport.
+
+Stacking contexts
+Z-index-> highest appears on top
