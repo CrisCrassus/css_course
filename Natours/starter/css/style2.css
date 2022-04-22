@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: rgb(53, 53, 53);
+}
+
+.header  {
+    position:relative;
+    width: 100vw;
+    height: 95vh;
+}
+
+.header .background {
+    background-image: url('../img/nat-4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    filter: blur(3px);
+    animation: filterBlur 2s ease-out 2s;
+    animation-fill-mode: backwards;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 35% 100%);
+}
+
+.header .background .center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .background .center h2{
+    font-size: 9rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 9rem;
+    animation: fadeOut 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.logo-box {
+    position: absolute;
+    z-index: 2;
+    top: 3rem;
+    left: 3rem;
+}
+
+.logo {
+    height: 5rem
+}
+
+.heading-primary{
+    position: absolute;
+    top: 40%;
+    left: 5rem;
+}
+
+.heading-primary .main {
+    text-transform: uppercase;
+    cursor: default;
+    display: block;
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: 3.5rem;
+    transition: all;
+    transition-duration: 1s;
+    animation: moveInLeft 1s ease-out 3s;
+    animation-fill-mode: backwards;
+}
+
+.heading-primary .main:hover {
+    font-size: 8rem;
+}
+
+.heading-primary .sub {
+    text-transform: uppercase;
+    display: block;
+    cursor: default;
+    font-size: 2rem;
+    font-weight: 400;
+    transition: all;
+    transition-duration: 0.5s;
+    animation: moveInLeft 1s ease-out 3.4s;
+    animation-fill-mode: backwards;
+    letter-spacing: 0.7rem;
+}
+
+.heading-primary .sub:hover {
+    font-size: 2.3rem;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes filterBlur {
+    0% {
+        filter: blur(0px);
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    50% {
+        filter: blur(0px);
+        clip-path: polygon(3% 0, 100% 0, 100% 100%, 5% 100%);
+    }
+
+    
+
+    100% {
+        filter: blur(3px);
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 35% 100%);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(.2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
