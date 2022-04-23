@@ -112,3 +112,12 @@ SASS:
 What is sass?
 A CSS preprocessor, extension of CSS that adds advanced features
 
+Basic Responsive Design Principles
+Fluid layouts -> adapt to the current viewport size (%, vh, vw)
+Responsive Units -> Using rem, em instead of px
+Flexible images -> scale with the viewport
+Media Queries -> Change certain style dependant on viewports
+
+
+
+FLOAT LAYOUTS:

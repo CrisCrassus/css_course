@@ -9,7 +9,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 30px;
+  background-color: #f0f8ff; }
 
 @keyframes moveInLeft {
   0% {
@@ -128,3 +130,37 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 7rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 2rem 0;
+    transition: hover;
+    transition-duration: 1s; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+    .row [class^="col-"]:hover {
+      background-color: azure; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/ 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - (2 * 6rem))/ 3); }
+  .row .col-2-of-3 {
+    width: calc((((100% - (2 * 6rem))/ 3) * 2) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - (3 * 6rem))/ 4); }
+  .row .col-2-of-4 {
+    width: calc((((100% - (3 * 6rem))/ 4) * 2) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc((((100% - (3 * 6rem))/ 4)  * 3) + (2 * 6rem)); }
