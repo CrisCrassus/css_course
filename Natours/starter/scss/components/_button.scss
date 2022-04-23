@@ -1,0 +1,63 @@
+%btn-placeholder {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    box-shadow: 0 0.4rem 1rem rgba($colour-black, 0.2);
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn {
+    &:link {
+        @extend %btn-placeholder;
+    }
+
+    &:visited {
+        @extend %btn-placeholder;
+    }
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($colour-black, 0.2);
+
+        &::after {
+            transform: scale(1.5, 2);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 1rem 0.5rem rgba($colour-black, 0.2);
+    }
+
+    &--white {
+        background-color: $colour-white;
+        color: $colour-grey-dark;
+
+        &::after {
+            background-color: $colour-white;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom 700ms ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+}
