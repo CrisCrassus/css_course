@@ -82,3 +82,33 @@ Absolute-> Element is taken out of normal flow, has no impact of surrounding	ele
 
 Stacking contexts
 Z-index-> highest appears on top
+
+CSS Architecture
+
+Think>Build>Architecture
+
+Think:
+Component driven design->divide page into modular components
+Reusable across different projects
+Independant components, not depend on parents
+
+Build:
+BEM -> Block Element Modifier
+block__element--Modifier {}
+
+Architecture: 
+7-1 patters
+7 partial folders compiles in 1 sass folder
+base/
+components/
+layouts/
+pages/
+themes/
+abstract/
+vendors/
+
+
+SASS:
+What is sass?
+A CSS preprocessor, extension of CSS that adds advanced features
+
