@@ -9,17 +9,19 @@ $colour-black: #000;
 
 //Greys
 $colour-grey-dark:#777; //std Text
+$colour-grey-light-1: #f7f7f7;
 
 //Blues
 $colour-light-blue: #f0f8ff;
 
 //FontSizes
 $rootFontSize: 62.5%;
+$default-font-size: 1.8rem;
 
 //Files
 $heroBanner: '../img/hero.jpg';
 
 //Grid
-$grid-width: 114rem;
+$grid-width: 130rem;
 $gutter-vertical: 7rem;
 $gutter-horizontal: 6rem;

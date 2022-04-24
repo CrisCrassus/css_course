@@ -121,3 +121,12 @@ Media Queries -> Change certain style dependant on viewports
 
 
 FLOAT LAYOUTS:
+
+require clear fix:
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
