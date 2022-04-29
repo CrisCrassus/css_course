@@ -1,0 +1,119 @@
+.card {
+    //Functionality
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+
+
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__side {
+        box-shadow: 0px 20px 50px rgba($colour-black, 0.2);
+        height: 50rem;
+        transition: transform 1s ease;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 5px;
+        overflow: hidden;
+        left: 0;
+        backface-visibility: hidden;
+
+        &--front {
+            background-color: $colour-white;
+        }
+
+        &--back {
+            transform: rotateY(-180deg);
+
+            &--ogn {
+                background-image: linear-gradient(to bottom right, rgba($colour-orange-light, 1), rgba($colour-orange-dark, 1));
+            }
+
+            &--blu {
+                background-image: linear-gradient(to bottom right, rgba($colour-blue-light, 1), rgba($colour-blue-dark, 1));
+            }
+
+            &--grn {
+                background-image: linear-gradient(to bottom right, rgba($colour-primary-light, 1), rgba($colour-primary-dark, 1));
+            }
+        }
+    }
+
+    //Front side styling
+    &__picture {
+        height: 40%;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+
+        &--1 {
+            background-image: linear-gradient(to bottom right, rgba($colour-orange-light, 1), rgba($colour-orange-dark, 1)), url(../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to bottom right, rgba($colour-blue-light, 1), rgba($colour-blue-dark, 1)), url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to bottom right, rgba($colour-primary-light, 1), rgba($colour-primary-dark, 1)), url(../img/nat-7.jpg);
+        }
+
+    }
+
+    &__heading {
+        position: absolute;
+        text-align: right;
+        top: 12rem;
+        right: 1rem;
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $colour-white;
+        width: 70%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--ogn {
+            background-image: linear-gradient(to bottom right, rgba($colour-orange-light, 0.8), rgba($colour-orange-dark, 0.8));
+        }
+        &--blu {
+            background-image: linear-gradient(to bottom right, rgba($colour-blue-light, 0.8), rgba($colour-blue-dark, 0.8));
+        }
+        &--grn {
+            background-image: linear-gradient(to bottom right, rgba($colour-primary-light, 0.8), rgba($colour-primary-dark, 0.8));
+        }
+    }
+
+    &__details {
+        padding: 2rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba($colour-black, 0.1);
+                }
+            }
+        }
+    }
+
+}

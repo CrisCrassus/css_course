@@ -12,7 +12,12 @@ $colour-grey-dark:#777; //std Text
 $colour-grey-light-1: #f7f7f7;
 
 //Blues
-$colour-light-blue: #f0f8ff;
+$colour-blue-light: #c1def8;
+$colour-blue-dark: #3985c7;
+
+//Oranges
+$colour-orange-light: #f9ee5d;
+$colour-orange-dark: #ff7730;
 
 //FontSizes
 $rootFontSize: 62.5%;
@@ -20,8 +25,10 @@ $default-font-size: 1.8rem;
 
 //Files
 $heroBanner: '../img/hero.jpg';
+$heroFeatures: '../img/nat-4.jpg';
+
 
 //Grid
 $grid-width: 114rem;
-$gutter-vertical: 7rem;
-$gutter-horizontal: 6rem;
+$gutter-vertical: 3rem;
+$gutter-horizontal: 5rem;
