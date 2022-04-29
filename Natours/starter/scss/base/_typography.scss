@@ -19,6 +19,14 @@
         letter-spacing: 1.75rem;
         animation: moveInRight 1s ease-out;
     }
+
+    &--card {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 75rem;
+        animation: moveInRight 1s ease-out;
+    }
 }
 
 body {
@@ -61,3 +69,15 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.card {
+    &__card-price{
+        font-size: 5.2rem;
+        letter-spacing: 10px;
+        color: $colour-white;
+        font-weight: 300;
+        text-shadow: $heading-shadow;
+    }
+}
+
+

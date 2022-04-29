@@ -57,6 +57,12 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
+  .heading-primary--card {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 75rem;
+    animation: moveInRight 1s ease-out; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -89,6 +95,13 @@ body {
   font-size: 1.8rem; }
   .paragraph:not(last-child) {
     margin-bottom: 3rem; }
+
+.card__card-price {
+  font-size: 5.2rem;
+  letter-spacing: 10px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 10px 50px rgba(0, 0, 0, 0.7); }
 
 .u-center-text {
   text-align: center; }
@@ -215,10 +228,18 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem; }
+  .card__card-price {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__backside-button {
+    position: absolute;
+    bottom: 0; }
   .card__side {
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
     height: 50rem;
