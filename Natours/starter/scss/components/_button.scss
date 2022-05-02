@@ -8,9 +8,15 @@
     box-shadow: 0 0.4rem 1rem rgba($colour-black, 0.2);
     position: relative;
     font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
 }
 
 .btn {
+    & {
+        @extend %btn-placeholder;
+    }
+
     &:link {
         @extend %btn-placeholder;
     }
@@ -19,7 +25,7 @@
         @extend %btn-placeholder;
     }
 
-    &:hover {
+    &:hover, &:focus {
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba($colour-black, 0.2);
 
@@ -40,6 +46,15 @@
 
         &::after {
             background-color: $colour-white;
+        }
+    }
+
+    &--green {
+        background-color: $colour-primary;
+        color: $colour-white;
+
+        &::after {
+            background-color: $colour-primary;
         }
     }
 
