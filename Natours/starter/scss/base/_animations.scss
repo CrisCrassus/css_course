@@ -41,3 +41,22 @@
         transform: translateY(0);
     }
 }
+
+@keyframes fadeInNavLinks {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0.01;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+
+
+}
