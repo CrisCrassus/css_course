@@ -7,6 +7,15 @@
     box-shadow: 0 1.5rem 4rem rgba($colour-black, 0.2);
     transition: all .3s;
 
+    @include respond(tab-port) {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    @include respond(phone) {
+        width:90%;
+    }
+
     &:hover {
         transform: translateY(-2px) scale(1.03);
         background-color: rgba($colour-white, 1);

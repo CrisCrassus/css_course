@@ -7,10 +7,37 @@
 }
 
 html {
-    font-size: $rootFontSize;
+    font-size: 62.5%; 
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem = 8px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; //1rem = 7px
+    }
+
+    @include respond(phone) {
+        font-size: 50%; //1rem = 7px
+    }
+
+    @include respond(big-desktop) {
+        font-size: 70%;
+    }
+
 }
 
 body {
     box-sizing: border-box;
     padding: 30px;
+
+    @include respond(phone) {
+        padding: 0px;
+    }
+    @include respond(tab-port) {
+        padding: 0px;
+    }
+    @include respond(tab-land) {
+        padding: 0px;
+    }
 }

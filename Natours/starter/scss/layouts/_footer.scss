@@ -4,9 +4,21 @@
     font-size: 1.4rem;
     color: $colour-grey-light-1;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
     }
 
     &__logo {
@@ -19,6 +31,10 @@
         padding-top: 1rem;
         text-align: center;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 
     &__list {
@@ -30,6 +46,15 @@
 
         &:not(:last-child) {
             margin-right: 1.5rem;
+
+            @include respond(phone) {
+                margin-right: 0rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @include respond(phone) {
+            display: block;
         }
     }
 
@@ -57,5 +82,11 @@
         text-align: left;
         float: right;
         width: 93%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+
+        }
     }
 }

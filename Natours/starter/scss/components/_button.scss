@@ -10,6 +10,11 @@
     font-size: 1.6rem;
     border: none;
     cursor: pointer;
+
+    @include respond(phone) {
+        padding: 1.2rem 3rem;
+        font-size: 1.3rem;
+    }
 }
 
 .btn {
@@ -25,7 +30,8 @@
         @extend %btn-placeholder;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba($colour-black, 0.2);
 
@@ -78,6 +84,7 @@
 }
 
 .btn-text {
+
     &:link,
     &:visited {
         color: $colour-primary;

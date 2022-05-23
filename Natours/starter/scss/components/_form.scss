@@ -33,6 +33,11 @@
         &::-webkit-input-placeholder {
             color: rgba($colour-black, .2);
         }
+
+        @include respond(phone) {
+            width: 100%;
+            background-color: rgba($colour-white, .9);
+    }
     }
 
     &__input:placeholder-shown+&__label {
@@ -53,6 +58,14 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 50%;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
     }
 
     &__radio-input {
